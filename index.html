@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signatura de correu · II Congrés Català del Treball</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="logo-congres.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap">
+<style>
+  :root{--gerd:#A6284F;--corall:#F0685A;--mari:#141F33;--ivori:#F5EFE9;--gris:#4A3E45;--gris2:#7A6A72;--linia:#E2D9D0}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ivori);color:var(--mari);font-family:Manrope,'Helvetica Neue',Helvetica,Arial,sans-serif;line-height:1.5}
+  header{background:var(--gerd);color:#fff;padding:28px 20px;position:relative;overflow:hidden}
+  header .in{max-width:1040px;margin:0 auto;position:relative;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  header h1{margin:0;font-size:22px;font-weight:800;line-height:1.1}
+  header p{margin:2px 0 0;font-size:14px;opacity:.9}
+  header svg.chev{position:absolute;right:-40px;top:-30px;height:150px;opacity:.9}
+  main{max-width:1040px;margin:0 auto;padding:28px 20px 60px;display:grid;grid-template-columns:340px minmax(0,1fr);gap:28px}
+  @media (max-width:820px){main{grid-template-columns:1fr}}
+  .card{background:#fff;border-radius:10px;padding:22px 22px 20px;border:1px solid var(--linia)}
+  .step{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gerd);margin:0 0 10px}
+  label{display:block;font-size:13px;font-weight:700;margin:12px 0 4px}
+  input{width:100%;font:inherit;font-size:15px;padding:10px 12px;border:1px solid var(--linia);border-radius:6px;background:#fff;color:var(--mari)}
+  input:focus{outline:2px solid var(--gerd);outline-offset:1px;border-color:var(--gerd)}
+  .hint{font-size:12px;color:var(--gris2);margin:4px 0 0}
+  .btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:800;font-size:15px;padding:12px 18px;border-radius:8px;border:0;cursor:pointer;min-height:44px}
+  .btn.primary{background:var(--gerd);color:#fff}
+  .btn.primary:hover{background:#8f2043}
+  .btn.ghost{background:#fff;color:var(--gerd);border:1.5px solid var(--gerd)}
+  .btn.ghost:hover{background:#fbf3f5}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;align-items:center}
+  .ok{font-size:13px;font-weight:700;color:#1d7a4a;display:none}
+  .preview{background:#fff;border:1px solid var(--linia);border-radius:10px;padding:26px;overflow:auto}
+  .preview-wrap{display:flex;flex-direction:column;gap:12px}
+  details{margin-top:18px;border-top:1px solid var(--linia);padding-top:12px}
+  summary{cursor:pointer;font-weight:800;font-size:14px;color:var(--mari)}
+  details p{font-size:13.5px;color:var(--gris);margin:8px 0}
+  footer{max-width:1040px;margin:0 auto;padding:0 20px 40px;font-size:12px;color:var(--gris2)}
+  code{font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#f3ece6;padding:1px 5px;border-radius:4px}
+</style>
+</head>
+<body>
+<header>
+  <svg class="chev" viewBox="0 0 118 100" aria-hidden="true"><polygon fill="#F0685A" points="0,0 24,0 74,50 24,100 0,100 50,50"></polygon><polygon fill="#F0685A" points="44,0 68,0 118,50 68,100 44,100 94,50"></polygon></svg>
+  <div class="in">
+    <svg viewBox="0 0 46 117" aria-label="II" role="img" style="height:52px;width:auto;flex-shrink:0"><polygon fill="#fff" points="0,17 17,0 17,100 0,117"></polygon><polygon fill="#fff" points="29,17 46,0 46,100 29,117"></polygon></svg>
+    <div><h1>Signatura de correu · II Congrés Català del Treball</h1><p>Omple les dades, copia la signatura i enganxa-la al teu correu.</p></div>
+  </div>
+</header>
+
+<main>
+  <section class="card" aria-labelledby="s1">
+    <p class="step" id="s1">1 · Les teves dades</p>
+    <label for="nom">Nom i cognoms</label>
+    <input id="nom" type="text" autocomplete="name" placeholder="Nom i cognoms">
+    <label for="carrec">Càrrec</label>
+    <input id="carrec" type="text" autocomplete="organization-title" placeholder="Càrrec">
+    <p class="hint">Es mostrarà com a «Càrrec · Secretaria tècnica del II Congrés Català del Treball». Deixa'l buit si només vols la segona part.</p>
+    <label for="tel">Telèfon</label>
+    <input id="tel" type="tel" autocomplete="tel" placeholder="000 000 000">
+    <label for="correu">Correu electrònic</label>
+    <input id="correu" type="email" autocomplete="email" placeholder="nom@eternumevents.com">
+
+    <p class="step" style="margin-top:22px">2 · Copia-la</p>
+    <div class="actions">
+      <button class="btn primary" id="copiar" type="button">Copia la signatura</button>
+      <span class="ok" id="ok" role="status">Copiada. Ara enganxa-la al teu correu.</span>
+    </div>
+    <div class="actions" style="margin-top:10px">
+      <a class="btn ghost" id="baixar" href="#" download="signatura-congres-treball.html">Descarrega l'HTML</a>
+    </div>
+
+    <details>
+      <summary>3 · On enganxar-la</summary>
+      <p><b>Gmail:</b> roda dentada → Veure tota la configuració → Signatura → Crea → enganxa (Cmd/Ctrl+V) → Desa els canvis.</p>
+      <p><b>Outlook (Mac i Windows):</b> Preferències → Signatures → «+» → enganxa al cos de la signatura → desa.</p>
+      <p><b>Apple Mail:</b> Preferències → Signatures → «+» → enganxa i desmarca «Fes servir sempre la meva tipografia».</p>
+      <p><b>Outlook web / Office 365:</b> Configuració → Correu → Redacta i respon → enganxa a l'editor de signatura.</p>
+    </details>
+  </section>
+
+  <section class="preview-wrap" aria-labelledby="s2">
+    <p class="step" id="s2" style="margin:0">Previsualització</p>
+    <div class="preview" id="preview"></div>
+    <p class="hint">Les imatges es carreguen des d'aquesta mateixa adreça, així que es veuran a qualsevol destinatari. El text va en Arial perquè els clients de correu no carreguen tipografies pròpies.</p>
+  </section>
+</main>
+<footer>II Congrés Català del Treball · 1, 2 i 3 de desembre de 2026 · Centre de Congressos del TecnoCampus, Mataró · Organitzen: Generalitat de Catalunya, Ajuntament de Mataró i TecnoCampus.</footer>
+
+<script>
+(function(){
+  var BASE='https://orilpik.github.io/signatura-congres-treball/';
+  var WEB=''; // adreça del web del congrés quan es conegui, p. ex. 'https://congrestreball.cat'
+  var GERD='#A6284F', MARI='#141F33', GRIS='#4A3E45', GRIS2='#7A6A72';
+  var $=function(id){return document.getElementById(id);};
+  function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function read(){return {nom:$('nom').value.trim(),carrec:$('carrec').value.trim(),tel:$('tel').value.trim(),correu:$('correu').value.trim()};}
+  function build(d){
+    var nom=esc(d.nom)||'[Nom i cognoms]';
+    var carrec=(d.carrec?esc(d.carrec)+' · ':'')+'Secretaria tècnica del II Congrés Català del Treball';
+    var parts=[];
+    if(d.tel) parts.push('T. '+esc(d.tel));
+    if(d.correu) parts.push('<a href="mailto:'+esc(d.correu)+'" style="color:'+GERD+';text-decoration:none">'+esc(d.correu)+'</a>');
+    var contacte=parts.length?parts.join(' · '):'[telèfon] · [correu]';
+    var lloc='1, 2 i 3 de desembre de 2026 · Centre de Congressos del TecnoCampus, Mataró';
+    if(WEB) lloc+=' · <a href="'+esc(WEB)+'" style="color:'+GERD+';text-decoration:none">'+esc(WEB.replace(/^https?:\/\//,''))+'</a>';
+    var legal='<b>Avís legal.</b> Aquest missatge i els fitxers adjunts s’adrecen exclusivament a la persona destinatària i poden contenir informació confidencial. Si l’heu rebut per error, comuniqueu-ho al remitent i elimineu-lo sense copiar-lo ni difondre’l. <b>Protecció de dades.</b> Les vostres dades són tractades per Eternum Events S.L. (CIF B25828237, Clot de les Monges 4, 2a, 25007 Lleida) amb la finalitat de gestionar la relació comercial i administrativa i l’organització del II Congrés Català del Treball, d’acord amb el Reglament (UE) 2016/679 i la Llei orgànica 3/2018. La base jurídica és l’execució d’aquesta relació i el compliment d’obligacions legals. No es preveuen cessions ni transferències internacionals, llevat d’obligació legal. Podeu exercir els drets d’accés, rectificació, supressió, limitació, portabilitat i oposició escrivint a <a href="mailto:hola@eternumevents.com" style="color:'+GRIS2+';text-decoration:underline">hola@eternumevents.com</a>, amb l’assumpte «Drets protecció de dades» i una còpia del document d’identitat.';
+    return '<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="width:600px;max-width:600px;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:'+MARI+'">'+
+      '<tr><td style="width:190px;padding:0 18px 0 0;vertical-align:middle"><img src="'+BASE+'logo-congres.png" width="190" height="52" alt="II Congrés Català del Treball" style="display:block;border:0;width:190px;height:52px"></td>'+
+      '<td style="border-left:2px solid '+GERD+';padding:2px 0 2px 18px;vertical-align:middle;font-family:Arial,Helvetica,sans-serif">'+
+      '<div style="font-size:15px;line-height:19px;font-weight:bold;color:'+MARI+'">'+nom+'</div>'+
+      '<div style="font-size:12px;line-height:16px;color:'+GRIS+';padding-top:2px">'+carrec+'</div>'+
+      '<div style="font-size:12px;line-height:16px;color:'+GRIS+';padding-top:6px">'+contacte+'</div></td></tr>'+
+      '<tr><td colspan="2" style="padding:14px 0 0 0;font-family:Arial,Helvetica,sans-serif">'+
+      '<div style="font-size:12px;line-height:16px;font-weight:bold;color:'+GERD+'">Treball digne per a una democràcia plena</div>'+
+      '<div style="font-size:12px;line-height:16px;color:'+GRIS+';padding-top:2px">'+lloc+'</div></td></tr>'+
+      '<tr><td colspan="2" style="padding:12px 0 0 0"><img src="'+BASE+'organitzen.png" width="440" height="30" alt="Organitzen: Generalitat de Catalunya, Ajuntament de Mataró i TecnoCampus" style="display:block;border:0;width:440px;height:30px"></td></tr>'+
+      '<tr><td colspan="2" style="padding:12px 0 0 0;font-family:Arial,Helvetica,sans-serif;font-size:9px;line-height:12px;color:'+GRIS2+'">'+legal+'</td></tr>'+
+      '</table>';
+  }
+  function plain(d){return (d.nom||'[Nom i cognoms]')+'\n'+(d.carrec?d.carrec+' · ':'')+'Secretaria tècnica del II Congrés Català del Treball\n'+[d.tel?'T. '+d.tel:'',d.correu].filter(Boolean).join(' · ')+'\nII Congrés Català del Treball · Treball digne per a una democràcia plena\n1, 2 i 3 de desembre de 2026 · Centre de Congressos del TecnoCampus, Mataró'+(WEB?' · '+WEB:'')+'\nOrganitzen: Generalitat de Catalunya, Ajuntament de Mataró i TecnoCampus';}
+  function render(){
+    var d=read(); var html=build(d);
+    $('preview').innerHTML=html;
+    var doc='<!doctype html>\n<html lang="ca"><head><meta charset="utf-8"><title>Signatura · II Congrés Català del Treball</title></head><body style="margin:0;padding:0;background:#ffffff">\n'+html+'\n</body></html>\n';
+    $('baixar').href='data:text/html;charset=utf-8,'+encodeURIComponent(doc);
+    try{localStorage.setItem('sig-cct',JSON.stringify(d));}catch(e){}
+  }
+  function showOk(){var o=$('ok');o.style.display='inline';clearTimeout(showOk.t);showOk.t=setTimeout(function(){o.style.display='none';},4000);}
+  function fallbackCopy(){
+    var node=$('preview'); var r=document.createRange(); r.selectNodeContents(node);
+    var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    try{document.execCommand('copy');}catch(e){}
+    s.removeAllRanges();
+  }
+  $('copiar').addEventListener('click',function(){
+    var d=read(); var html=build(d);
+    if(navigator.clipboard&&window.ClipboardItem){
+      var item=new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain(d)],{type:'text/plain'})});
+      navigator.clipboard.write([item]).then(showOk,function(){fallbackCopy();showOk();});
+    }else{fallbackCopy();showOk();}
+  });
+  ['nom','carrec','tel','correu'].forEach(function(id){$(id).addEventListener('input',render);});
+  try{var saved=JSON.parse(localStorage.getItem('sig-cct')||'null');if(saved){$('nom').value=saved.nom||'';$('carrec').value=saved.carrec||'';$('tel').value=saved.tel||'';$('correu').value=saved.correu||'';}}catch(e){}
+  render();
+})();
+</script>
+</body>
+</html>
